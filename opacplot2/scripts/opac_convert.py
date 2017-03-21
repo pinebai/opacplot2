@@ -177,7 +177,6 @@ class Formats_toEosDict(object):
         return eos_dict
         
     def sesame_qeos_toEosDict(self):
-        raise Warning('QEOS-SESAME is not ready yet!')
         try:
             op = opp.OpgSesame(self.path_in, opp.OpgSesame.SINGLE)
         except ValueError:
