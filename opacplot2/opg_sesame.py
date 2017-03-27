@@ -101,6 +101,7 @@ class OpgSesame:
             header = self.fhand.readline()
             if not header: break # Reached EOF
             if header[:3] == " 2 ": break
+            print(header)
 
             matid = int(header.split()[1])
             recid = int(header.split()[2])
