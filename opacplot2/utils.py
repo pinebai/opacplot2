@@ -240,8 +240,10 @@ class EosMergeGrids(dict):
         mask = {}
         if qeos:
             species_list = ['ele', 'ion', 'total']
+        # RoksK's file doesn't have ioncc or cc curves so we're just going
+        # to use the others.
         else: 
-            species_list = ['ele', 'ion', 'total', 'cc', 'ioncc']
+            species_list = ['ele', 'ion', 'total']
         for species in species_list:
             for var in ['dens', 'temps']:
                key = species + '_' + var
